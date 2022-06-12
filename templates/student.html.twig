@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div>
+        Name: {{ student.getName() }}
+        <br>
+        Surname: {{ student.getSurname }}
+        <br>
+        Birthday: {{ student.getBirthday }}
+        <br>
+        <h3> Characteristic </h3>
+        {{ student.getCharacteristic }}
+    </div>
+
+{% endblock %}

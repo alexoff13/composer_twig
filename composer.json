@@ -1,0 +1,10 @@
+{
+    "require": {
+        "monolog/monolog": "^3.0",
+        "twig/twig": "^2.0",
+        "fzaninotto/faker": "^1.5"
+    },
+    "autoload": {
+        "files": ["src/Student.php"]
+    }
+}

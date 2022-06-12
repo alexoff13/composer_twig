@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Дата рождения</th>
+            <th scope="col">Ссылка</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for student in students %}
+            <tr>
+                <th scope="row">{{ student.getId() }}</th>
+                <td>{{ student.getName() }}</td>
+                <td>{{ student.getSurname() }}</td>
+                <td>{{ student.getBirthday() }}</td>
+                <td><a href="student.php?id={{ student.getId() }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Подробнее</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
